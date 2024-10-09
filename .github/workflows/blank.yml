@@ -25,12 +25,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      on:
-  workflow_dispatch:
-jobs:
-  demo_app_authentication:
-    runs-on: ubuntu-latest
-    steps:
+
       - name: Generate a token
         id: generate-token
         uses: actions/create-github-app-token@v1
