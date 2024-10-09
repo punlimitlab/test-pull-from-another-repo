@@ -42,7 +42,7 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
+          username: ${{ steps.generate-token.outputs.app-slug }}[readorgpackages]
           password: ${{ steps.generate-token.outputs.token }}
 
       - name: pull-one-image-from-another-repo
