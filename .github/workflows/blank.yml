@@ -33,6 +33,9 @@ jobs:
           app-id: ${{ vars.APP_ID }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
           owner: ${{ github.repository_owner }}
+          repositories: |
+            test-compose-push
+            test-pull-from-another-repo
 
       - name: Log into registry ${{ env.REGISTRY }}
         if: github.event_name != 'pull_request'
