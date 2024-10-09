@@ -43,8 +43,8 @@ jobs:
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ steps.generate-token.outputs.app-slug }}[bot]
-          #password: ${{ steps.generate-token.outputs.token }}
-          password: ${{ secrets.GH_PACKAGES_PAT }}
+          password: ${{ steps.generate-token.outputs.token }}
+          #password: ${{ secrets.GH_PACKAGES_PAT }}
 
       - name: pull-one-image-from-another-repo
         run: |
